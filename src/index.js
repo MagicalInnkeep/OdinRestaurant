@@ -1,6 +1,8 @@
 import "./styles.css";
 
 import { homeContent } from "./home";
+import { menuContent } from "./menu";
+import { aboutContent } from "./about";
 
 // Take our main content
 const content=document.querySelector("#content");
@@ -9,8 +11,19 @@ content.appendChild(homeContent);
 
 const headerButton = document.querySelector("header");
 headerButton.addEventListener('click',(event)=>{
-    //content.removeChild("div");
-    const page = event.target.textContent
-    console.log(page);
-    //content.appendChild(page);
+    const oldContent = document.querySelector(".content");
+    content.removeChild(oldContent);
+    const page = event.target.textContent.toLowerCase()
+    switch(page){
+        case "home": 
+            content.appendChild(homeContent);
+            break;
+        case "menu": 
+            content.appendChild(menuContent);
+            break;
+        case "about": 
+            content.appendChild(aboutContent);
+            break;
+    }
+
 });
