@@ -24,6 +24,5 @@ headerButton.addEventListener('click',(event)=>{
         case "about": 
             content.appendChild(aboutContent);
             break;
-    }
-
+    };
 });
