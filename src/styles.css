@@ -43,6 +43,19 @@ header{
 .content{
     width: max(800px,75%);
     background-color: var(--color-bg2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-size: x-large;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.body{
+    padding: 20px;
 }
 
 footer{
